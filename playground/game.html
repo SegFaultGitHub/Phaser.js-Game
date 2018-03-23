@@ -14,13 +14,18 @@
 
 <script type="text/javascript">
 
-var game = new Phaser.Game(512, 512, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+var game = new Phaser.Game(700, 700, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 
 function preload() {
     console.log("preload");
 }
 
-function create() { }
+function create() {
+    var text = "Bertrand suce des bites";
+    var style = { font: "65px Arial", fill: "#ff0044" };
+
+    var t = game.add.text(0, 0, text, style);
+}
 
 function update() { }
 
